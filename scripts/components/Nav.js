@@ -36,7 +36,7 @@ class Nav extends Component {
     logout(e) {
         e.preventDefault();
         const {dispatch} = this.props;
-        dispatch(logoutUser())
+        dispatch(logoutUser());
     }
 
     renderArtworks(playlist) {

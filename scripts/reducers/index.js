@@ -7,6 +7,7 @@ import navigator from '../reducers/navigator';
 import player from '../reducers/player';
 import playlists from '../reducers/playlists';
 import toggleStats from '../reducers/toggleStats';
+import genres from '../reducers/genres';
 
 const rootReducer = combineReducers({
     authed,
@@ -17,6 +18,7 @@ const rootReducer = combineReducers({
     player,
     playlists,
     toggleStats,
+    genres,
 });
 
 export default rootReducer;

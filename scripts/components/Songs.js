@@ -25,11 +25,11 @@ class Songs extends Component {
     }
 
     render() {
-        const {authed, dispatch, height, playingSongId, playlist, playlists, sticky, songs, time, users, toggleStats} = this.props;
+        const {authed, dispatch, height, playingSongId, playlist, playlists, sticky, songs, time, users, toggleStats, genres} = this.props;
 
         return (
             <div className={'songs' + (sticky ? ' sticky' : '')}>
-                <Toolbar dispatch={dispatch} playlist={playlist} sticky={sticky} time={time} />
+                <Toolbar dispatch={dispatch} playlist={playlist} sticky={sticky} time={time} genres={genres} />
                 <div className='container'>
                     <SongCards
                         authed={authed}

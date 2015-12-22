@@ -15,7 +15,7 @@ class NavContainer extends Component {
 }
 
 function mapStateToProps(state) {
-    const {authed, entities, environment, navigator, toggleStats} = state;
+    const {authed, entities, environment, navigator, toggleStats, genres} = state;
 
     return {
         authed,
@@ -24,6 +24,7 @@ function mapStateToProps(state) {
         navigator,
         songs: entities.songs,
         toggleStats: toggleStats,
+        genres: genres.genres
     };
 }
 

@@ -6,6 +6,7 @@ import NavSearch from '../components/NavSearch';
 import Popover from '../components/Popover';
 import {getImageUrl} from '../utils/SongUtils';
 import Switch from '../components/Switch';
+import GenreSelector from '../components/GenreSelector';
 
 const PATHS = ['stream', 'likes'];
 
@@ -99,7 +100,7 @@ class Nav extends Component {
     }
 
     renderSettingsPanel() {
-        const {dispatch, toggleStats} = this.props;
+        const {dispatch, toggleStats, genres} = this.props;
 
         return (
             <Popover className='nav-settings'>
@@ -112,6 +113,10 @@ class Nav extends Component {
                     <ul className='nav-settings-popover-list'>
                         <li className='nav-settings-popover-item'>
                             Toggle stats <Switch isOn={toggleStats.showStats} toggleFunc={this.toggleStats} />
+                        </li>
+                        <li className='nav-settings-popover-item nav-settings-popover-item--genreSelector'>
+                            <div className='genreSelector-heading'>Pinned Queries</div>
+                            <GenreSelector genres={genres} dispatch={dispatch} />
                         </li>
                     </ul>
                 </div>

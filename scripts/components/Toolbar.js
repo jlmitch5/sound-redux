@@ -7,10 +7,10 @@ const DAYS = [7, 30, 90];
 
 class Toolbar extends Component {
     renderGenres() {
-        const {dispatch, playlist, time} = this.props;
+        const {dispatch, playlist, time, genres} = this.props;
         const genre = playlist.split(' - ')[0];
 
-        return GENRES.map(g => {
+        return genres.map(g => {
             const route = {
                 path: ['songs'],
                 query: {

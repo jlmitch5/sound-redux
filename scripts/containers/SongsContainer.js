@@ -17,7 +17,7 @@ class SongsContainer extends Component {
 }
 
 function mapStateToProps(state) {
-    const {authed, entities, environment, navigator, player, playlists, toggleStats} = state;
+    const {authed, entities, environment, navigator, player, playlists, toggleStats, genres} = state;
 
     const playingSongId = getPlayingSongId(player, playlists);
 
@@ -40,6 +40,7 @@ function mapStateToProps(state) {
         time,
         users: entities.users,
         toggleStats,
+        genres: genres.genres,
     };
 }
 

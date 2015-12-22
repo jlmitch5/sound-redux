@@ -1,0 +1,30 @@
+.genreSelector-heading {
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    // border-bottom: 1px solid #fff;
+}
+
+.genreSelector-container {
+    padding-bottom: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.genreSelector-genre {
+    padding: 3px 0;
+    font-size: 11px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.genreSelector-genre-delete {
+    color: #fff;
+    font-size: 14px;
+}
+
+.genreSelector-genre:last-child {
+    border-bottom: 0;
+}
